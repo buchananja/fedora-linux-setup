@@ -36,7 +36,7 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 
-# installs r
+# installs r with developer dependencies
 sudo dnf install -y R R-core R-core-devel R-java R-java-devel libRmath libRmath-devel libcurl-devel openssl-devel harfbuzz-devel fribidi-devel freetype-devel libpng-devel libjpeg-turbo-devel
 
 # installs rstudio
