@@ -1,2 +1,3 @@
 A bash script for automating the setup and formatting of a fresh install of Fedora linux.
-- Installs and sets gnome system fonts to Google Roboto (Flex, Serif, Slab, and Mono)
+- Installs and sets GNOME system fonts to Adobe Source (Sans, Serif, Code)
+- Installs gnome-tweaks, R/RStudio, VSCode, and Miniconda 
