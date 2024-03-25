@@ -15,13 +15,13 @@ fc-cache -fv
 # sets default terminal font
 gsettings reset org.gnome.desktop.interface monospace-font-name
 
-# sets system default fonts
+# sets system default fonts to Adobe Source family
 gsettings set org.gnome.desktop.interface font-name 'Source Sans 3 Regular 12'
 gsettings set org.gnome.desktop.interface document-font-name 'Source Serif 4 Regular 12'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro Regular 12'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Source Sans 3 Bold 12'
 
-# sets font scaling
+# sets font scaling (20% increase)
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
 
 # installs official fedora multimedia codecs
@@ -29,14 +29,14 @@ sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-o
 sudo dnf install -y lame\* --exclude=lame-devel
 sudo dnf group upgrade -y --with-optional Multimedia
 
-# install conda
+# install miniconda
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 
-# installs r
+# installs r (programming language) with developer add-ons
 sudo dnf install -y R R-core R-core-devel R-java R-java-devel libRmath libRmath-devel libcurl-devel openssl-devel harfbuzz-devel fribidi-devel freetype-devel libpng-devel libjpeg-turbo-devel
 
 # installs rstudio
