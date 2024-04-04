@@ -6,8 +6,8 @@ sudo dnf upgrade --refresh -y
 # installs gnome tweaks
 sudo dnf install -y gnome-tweaks
 
-# installs adobe source fonts from fedora repository
-sudo dnf install -y adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts
+# installs liberation fonts from fedora repository
+sudo dnf install -y liberation-fonts
 
 # rebuilds font cache
 fc-cache -fv
@@ -15,11 +15,11 @@ fc-cache -fv
 # sets default terminal font
 gsettings reset org.gnome.desktop.interface monospace-font-name
 
-# sets system default fonts to Adobe Source family
-gsettings set org.gnome.desktop.interface font-name 'Source Sans 3 Regular 12'
-gsettings set org.gnome.desktop.interface document-font-name 'Source Serif 4 Regular 12'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro Regular 12'
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Source Sans 3 Bold 12'
+# sets system default fonts to Liberation family
+gsettings set org.gnome.desktop.interface font-name 'Liberation Sans Regular 12'
+gsettings set org.gnome.desktop.interface document-font-name 'Liberation Serif Regular 12'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Liberation Mono Regular 12'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Liberation Sans Bold 12'
 
 # sets font scaling (20% increase)
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
